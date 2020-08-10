@@ -5,7 +5,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -66,7 +72,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(3720,590)" to="(3720,950)"/>
     <wire from="(210,360)" to="(320,360)"/>
     <wire from="(1700,500)" to="(1700,510)"/>
-    <wire from="(1550,660)" to="(1610,660)"/>
     <wire from="(3070,460)" to="(3140,460)"/>
     <wire from="(1610,490)" to="(1660,490)"/>
     <wire from="(1260,290)" to="(1700,290)"/>
@@ -75,9 +80,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(2730,370)" to="(2740,370)"/>
     <wire from="(1480,640)" to="(1490,640)"/>
     <wire from="(190,770)" to="(220,770)"/>
+    <wire from="(300,630)" to="(390,630)"/>
     <wire from="(3560,310)" to="(3560,390)"/>
-    <wire from="(320,360)" to="(320,660)"/>
     <wire from="(3640,440)" to="(3640,470)"/>
+    <wire from="(320,360)" to="(320,660)"/>
     <wire from="(2110,350)" to="(2110,360)"/>
     <wire from="(1260,300)" to="(1460,300)"/>
     <wire from="(3490,530)" to="(3490,560)"/>
@@ -98,8 +104,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(430,160)" to="(430,170)"/>
     <wire from="(1960,360)" to="(1960,440)"/>
     <wire from="(1740,910)" to="(1740,930)"/>
-    <wire from="(360,650)" to="(360,670)"/>
     <wire from="(2060,350)" to="(2110,350)"/>
+    <wire from="(360,650)" to="(360,670)"/>
     <wire from="(2480,410)" to="(2490,410)"/>
     <wire from="(570,950)" to="(990,950)"/>
     <wire from="(460,540)" to="(460,620)"/>
@@ -118,6 +124,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(3770,460)" to="(3770,480)"/>
     <wire from="(3760,370)" to="(3760,390)"/>
     <wire from="(3380,310)" to="(3380,340)"/>
+    <wire from="(1540,660)" to="(1610,660)"/>
     <wire from="(1610,500)" to="(1620,500)"/>
     <wire from="(1630,600)" to="(1640,600)"/>
     <wire from="(190,750)" to="(210,750)"/>
@@ -142,9 +149,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1700,290)" to="(1700,500)"/>
     <wire from="(3300,230)" to="(3750,230)"/>
     <wire from="(3750,370)" to="(3760,370)"/>
-    <wire from="(320,660)" to="(320,670)"/>
     <wire from="(2210,240)" to="(3060,240)"/>
     <wire from="(2580,520)" to="(2580,560)"/>
+    <wire from="(320,660)" to="(320,670)"/>
     <wire from="(2580,560)" to="(2590,560)"/>
     <wire from="(3630,460)" to="(3720,460)"/>
     <wire from="(3640,470)" to="(3730,470)"/>
@@ -156,18 +163,19 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(2070,330)" to="(2070,340)"/>
     <wire from="(1940,360)" to="(1940,370)"/>
     <wire from="(2330,940)" to="(3870,940)"/>
+    <wire from="(140,670)" to="(140,760)"/>
     <wire from="(1420,360)" to="(1420,630)"/>
     <wire from="(3920,140)" to="(3920,940)"/>
     <wire from="(1440,740)" to="(1440,750)"/>
     <wire from="(1750,840)" to="(1750,910)"/>
     <wire from="(100,80)" to="(390,80)"/>
-    <wire from="(1790,520)" to="(1850,520)"/>
     <wire from="(2820,360)" to="(2820,370)"/>
     <wire from="(1260,350)" to="(1660,350)"/>
     <wire from="(440,640)" to="(470,640)"/>
     <wire from="(3700,310)" to="(3700,390)"/>
     <wire from="(1720,500)" to="(1730,500)"/>
     <wire from="(3860,440)" to="(3860,460)"/>
+    <wire from="(550,500)" to="(640,500)"/>
     <wire from="(3730,470)" to="(3730,480)"/>
     <wire from="(2620,320)" to="(2620,340)"/>
     <wire from="(3780,440)" to="(3780,450)"/>
@@ -187,8 +195,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(800,370)" to="(800,500)"/>
     <wire from="(530,530)" to="(570,530)"/>
     <wire from="(350,100)" to="(350,120)"/>
-    <wire from="(340,730)" to="(340,750)"/>
     <wire from="(2830,450)" to="(2900,450)"/>
+    <wire from="(340,730)" to="(340,750)"/>
     <wire from="(430,100)" to="(430,120)"/>
     <wire from="(1890,360)" to="(1940,360)"/>
     <wire from="(1940,530)" to="(1940,800)"/>
@@ -207,10 +215,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1390,740)" to="(1390,750)"/>
     <wire from="(1430,740)" to="(1440,740)"/>
     <wire from="(340,250)" to="(1200,250)"/>
-    <wire from="(1550,620)" to="(1560,620)"/>
+    <wire from="(1780,520)" to="(1850,520)"/>
     <wire from="(3590,460)" to="(3590,480)"/>
-    <wire from="(270,760)" to="(300,760)"/>
     <wire from="(710,410)" to="(730,410)"/>
+    <wire from="(270,760)" to="(300,760)"/>
     <wire from="(440,620)" to="(460,620)"/>
     <wire from="(1850,360)" to="(1860,360)"/>
     <wire from="(1870,460)" to="(1880,460)"/>
@@ -224,7 +232,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(520,620)" to="(590,620)"/>
     <wire from="(1260,360)" to="(1420,360)"/>
     <wire from="(2580,330)" to="(2580,350)"/>
-    <wire from="(300,630)" to="(380,630)"/>
     <wire from="(3490,560)" to="(3680,560)"/>
     <wire from="(3480,250)" to="(3480,390)"/>
     <wire from="(980,930)" to="(990,930)"/>
@@ -238,6 +245,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1010,920)" to="(3870,920)"/>
     <wire from="(3610,550)" to="(3690,550)"/>
     <wire from="(1480,720)" to="(1480,750)"/>
+    <wire from="(1260,690)" to="(1260,780)"/>
     <wire from="(440,160)" to="(440,170)"/>
     <wire from="(3030,370)" to="(3060,370)"/>
     <wire from="(3700,310)" to="(3840,310)"/>
@@ -301,7 +309,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(210,300)" to="(360,300)"/>
     <wire from="(520,630)" to="(550,630)"/>
     <wire from="(1740,910)" to="(1750,910)"/>
-    <wire from="(1790,480)" to="(1800,480)"/>
     <wire from="(2580,350)" to="(2580,360)"/>
     <wire from="(1670,600)" to="(1680,600)"/>
     <wire from="(770,490)" to="(840,490)"/>
@@ -309,9 +316,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(3610,240)" to="(3610,370)"/>
     <wire from="(210,280)" to="(860,280)"/>
     <wire from="(2340,270)" to="(2340,290)"/>
-    <wire from="(550,500)" to="(630,500)"/>
     <wire from="(390,80)" to="(390,140)"/>
     <wire from="(3060,350)" to="(3060,370)"/>
+    <wire from="(1540,620)" to="(1560,620)"/>
     <wire from="(2600,560)" to="(2820,560)"/>
     <wire from="(1720,580)" to="(1720,610)"/>
     <wire from="(820,400)" to="(820,410)"/>
@@ -368,8 +375,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(2490,360)" to="(2490,410)"/>
     <wire from="(840,470)" to="(840,490)"/>
     <wire from="(1700,670)" to="(1700,800)"/>
-    <wire from="(360,300)" to="(360,650)"/>
     <wire from="(1410,640)" to="(1460,640)"/>
+    <wire from="(360,300)" to="(360,650)"/>
     <wire from="(590,620)" to="(590,640)"/>
     <wire from="(340,160)" to="(340,250)"/>
     <wire from="(3620,370)" to="(3620,390)"/>
@@ -382,345 +389,77 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(770,500)" to="(800,500)"/>
     <wire from="(1910,460)" to="(1920,460)"/>
     <wire from="(650,60)" to="(680,60)"/>
-    <wire from="(210,670)" to="(230,670)"/>
     <wire from="(3890,960)" to="(3890,980)"/>
+    <wire from="(210,670)" to="(230,670)"/>
     <wire from="(430,100)" to="(440,100)"/>
     <wire from="(2340,570)" to="(2580,570)"/>
     <wire from="(930,350)" to="(1000,350)"/>
-    <wire from="(280,650)" to="(360,650)"/>
     <wire from="(2820,530)" to="(2820,560)"/>
+    <wire from="(280,650)" to="(360,650)"/>
     <wire from="(1700,800)" to="(1720,800)"/>
+    <wire from="(1780,480)" to="(1800,480)"/>
     <wire from="(3070,460)" to="(3070,480)"/>
     <wire from="(800,370)" to="(880,370)"/>
     <wire from="(3060,240)" to="(3060,320)"/>
     <wire from="(2860,330)" to="(2860,350)"/>
-    <comp lib="1" loc="(2600,420)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(3640,440)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(2420,430)" name="XOR Gate">
+    <comp lib="1" loc="(480,540)" name="AND Gate">
       <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2660,440)" name="XOR Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(3080,440)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(3430,340)" name="NOT Gate"/>
-    <comp lib="1" loc="(2840,430)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(2980,380)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(278,34)" name="Text">
-      <a name="text" val="01 = Subtraction"/>
-    </comp>
-    <comp lib="1" loc="(1730,500)" name="XOR Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1850,520)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(1970,360)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(600,130)" name="AND Gate"/>
-    <comp lib="1" loc="(2360,410)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(3500,440)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(130,760)" name="XOR Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1880,460)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(220,770)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1250,780)" name="XOR Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2340,510)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(2340,320)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(340,730)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="6" loc="(515,166)" name="Text">
-      <a name="text" val="1 = left"/>
-    </comp>
-    <comp lib="1" loc="(3750,530)" name="OR Gate">
-      <a name="facing" val="south"/>
     </comp>
     <comp lib="1" loc="(3490,530)" name="OR Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(3100,340)" name="Constant">
+    <comp lib="1" loc="(2840,430)" name="XOR Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(1490,640)" name="XOR Gate">
-      <a name="facing" val="west"/>
+    <comp lib="0" loc="(570,170)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(2820,530)" name="XOR Gate">
+    <comp lib="0" loc="(1260,690)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(2090,420)" name="XOR Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(630,500)" name="XOR Gate">
+    <comp lib="1" loc="(720,510)" name="AND Gate">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="1" loc="(1800,370)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(299,49)" name="Text">
-      <a name="text" val="10 = Two's Compliment"/>
-    </comp>
-    <comp lib="1" loc="(320,830)" name="XOR Gate">
+    <comp lib="1" loc="(3060,350)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
     <comp lib="1" loc="(3780,440)" name="AND Gate">
       <a name="facing" val="south"/>
     </comp>
+    <comp lib="6" loc="(174,636)" name="Text">
+      <a name="text" val="Larger than 4-bits"/>
+    </comp>
+    <comp lib="1" loc="(3640,440)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(3610,530)" name="OR Gate">
+      <a name="facing" val="south"/>
+    </comp>
     <comp lib="1" loc="(1940,530)" name="XOR Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(2380,310)" name="Constant">
+    <comp lib="0" loc="(140,670)" name="Pin">
       <a name="facing" val="south"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(2190,230)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="0" loc="(2620,320)" name="Constant">
-      <a name="facing" val="south"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(650,60)" name="Pin">
       <a name="output" val="true"/>
-      <a name="width" val="4"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="2" loc="(350,120)" name="Demultiplexer">
+    <comp lib="0" loc="(530,130)" name="Splitter"/>
+    <comp lib="1" loc="(2340,320)" name="NOT Gate">
       <a name="facing" val="south"/>
-      <a name="selloc" val="tr"/>
-      <a name="select" val="2"/>
-      <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(190,320)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="0" loc="(390,70)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(1680,570)" name="XOR Gate">
-      <a name="facing" val="south"/>
+    <comp lib="1" loc="(1730,500)" name="OR Gate">
+      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(3140,460)" name="Constant">
       <a name="facing" val="west"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="1" loc="(1860,360)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2500,360)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(3860,440)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(190,260)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="0" loc="(1240,260)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="1" loc="(1440,710)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(3060,540)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(480,540)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="2" loc="(3910,940)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="1" loc="(1400,740)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2580,520)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(340,100)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(1380,640)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(880,370)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(380,630)" name="XOR Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2820,340)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(1370,800)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="2" loc="(430,120)" name="Demultiplexer">
-      <a name="facing" val="south"/>
-      <a name="select" val="2"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="1" loc="(1700,670)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(1640,600)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(269,18)" name="Text">
-      <a name="text" val="00 = Addition"/>
-    </comp>
-    <comp lib="1" loc="(1460,810)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(1560,510)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1320,650)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(590,600)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(3060,350)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(3280,210)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="1" loc="(1610,660)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(440,100)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(570,700)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(470,640)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2580,330)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(670,150)" name="AND Gate"/>
-    <comp lib="1" loc="(840,470)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(1750,840)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="6" loc="(518,150)" name="Text">
-      <a name="text" val="0 = right"/>
-    </comp>
-    <comp lib="0" loc="(3720,590)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="1" loc="(720,510)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2030,350)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(820,570)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(1620,500)" name="NOT Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(570,170)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(230,670)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(628,41)" name="Text">
-      <a name="text" val="Output"/>
-    </comp>
-    <comp lib="0" loc="(530,130)" name="Splitter"/>
-    <comp lib="1" loc="(3720,440)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(2740,370)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(2090,420)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="6" loc="(287,64)" name="Text">
-      <a name="text" val="11 = Shift Left/Right"/>
-    </comp>
-    <comp lib="1" loc="(980,430)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(730,410)" name="AND Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1920,430)" name="XOR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(2900,450)" name="XOR Gate">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(3580,440)" name="AND Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(1240,320)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="right"/>
-    </comp>
-    <comp lib="0" loc="(1010,920)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="1" loc="(3610,530)" name="OR Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(2860,330)" name="Constant">
+    <comp lib="0" loc="(2620,320)" name="Constant">
       <a name="facing" val="south"/>
       <a name="value" val="0x0"/>
     </comp>
@@ -728,6 +467,291 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="north"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="1" loc="(3430,340)" name="NOT Gate"/>
+    <comp lib="1" loc="(2740,370)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(320,830)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1860,360)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(340,100)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(2340,510)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(287,64)" name="Text">
+      <a name="text" val="11 = Shift Left/Right"/>
+    </comp>
+    <comp lib="0" loc="(190,260)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="1" loc="(1680,570)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(2420,430)" name="XOR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(590,600)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(440,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(3100,340)" name="Constant">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1490,640)" name="OR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(390,70)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(650,60)" name="Pin">
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(640,500)" name="OR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(2580,330)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1640,600)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1260,780)" name="OR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="6" loc="(515,166)" name="Text">
+      <a name="text" val="1 = left"/>
+    </comp>
+    <comp lib="1" loc="(2500,360)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(1750,840)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="1" loc="(820,570)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1320,650)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(2190,230)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="1" loc="(980,430)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1560,510)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1400,740)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(220,770)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(1240,320)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="2" loc="(3910,940)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="2" loc="(350,120)" name="Demultiplexer">
+      <a name="facing" val="south"/>
+      <a name="selloc" val="tr"/>
+      <a name="select" val="2"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(3280,210)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="1" loc="(2820,530)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(2360,410)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(2820,340)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(3720,590)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="6" loc="(299,49)" name="Text">
+      <a name="text" val="10 = Two's Compliment"/>
+    </comp>
+    <comp lib="0" loc="(2860,330)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(3720,440)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1970,360)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(730,410)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(2900,450)" name="XOR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(2660,440)" name="XOR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1610,660)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(190,320)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="6" loc="(518,150)" name="Text">
+      <a name="text" val="0 = right"/>
+    </comp>
+    <comp lib="1" loc="(140,760)" name="OR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(3750,530)" name="OR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(570,700)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(628,41)" name="Text">
+      <a name="text" val="Output"/>
+    </comp>
+    <comp lib="1" loc="(1620,500)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1920,430)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1440,710)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(670,150)" name="AND Gate"/>
+    <comp lib="1" loc="(840,470)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1850,520)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(2600,420)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(269,18)" name="Text">
+      <a name="text" val="00 = Addition"/>
+    </comp>
+    <comp lib="1" loc="(340,730)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(880,370)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(3860,440)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="2" loc="(430,120)" name="Demultiplexer">
+      <a name="facing" val="south"/>
+      <a name="select" val="2"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(2380,310)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(2580,520)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(470,640)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(390,630)" name="OR Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1700,670)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1880,460)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(1010,920)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="1" loc="(1800,370)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(3580,440)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(3500,440)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(600,130)" name="AND Gate"/>
+    <comp lib="1" loc="(3080,440)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(230,670)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1460,810)" name="XOR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1380,640)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(2980,380)" name="AND Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1370,800)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(278,34)" name="Text">
+      <a name="text" val="01 = Subtraction"/>
+    </comp>
+    <comp lib="1" loc="(2030,350)" name="NOT Gate">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(1240,260)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+    </comp>
+    <comp lib="6" loc="(1248,659)" name="Text">
+      <a name="text" val="Larger than 4-bits"/>
+    </comp>
+    <comp lib="1" loc="(3060,540)" name="XOR Gate">
+      <a name="facing" val="south"/>
     </comp>
   </circuit>
 </project>
