@@ -1,11 +1,14 @@
-## Name of Program:		    Version number:	0.01            Date last changed: 10/08/2020
+## Name of Program:		    Version number:	0.2            Date last changed: 11/08/2020
 ## Name of Author: Conor Loughran
-## Description of Program: Display array to user and allow user to manipulate data within the array based on menu.
+## Description of Program: Allow user to manipulate data within given array based on menu.
 
 .data
     ## Array set up
     array:	.word 0x00, 0x33, 0x44, 0x88, 0x56, 0x45, 0x56, 0x41, 0x00, 0x33, 0x44, 0x88, 0x56, 0x45, 0x56, 0x41, 0x00, 0x33, 0x44, 0x88, 0x56, 0x25, 0x58, 0x51, 0x03, 0x33, 0x24, 0x83, 0x52, 0x72, 0x16, 0x73, 0x85, 0x45, 0x47, 0x86, 0x36, 0x43, 0x52, 0x41, 0x74, 0x32, 0x04, 0x28, 0x26, 0x23, 0x46, 0x46, 0x06, 0x33, 0x34, 0x23, 0x21, 0x53, 0x15, 0x47, 0x77, 0x38, 0x41, 0x89, 0x58, 0x42, 0x51, 0x40, 0x86, 0x53, 0x40, 0x58, 0x36, 0x67, 0x53, 0x71, 0x03, 0x33, 0x74, 0x01, 0x89, 0x45, 0x12, 0x86, 0x60, 0x93, 0x42, 0x34, 0x66, 0x41, 0x51, 0x22, 0x60, 0x73, 0x41, 0x48, 0x46, 0x55, 0x52, 0x21, 0x00, 0x33, 0x64, 0x48, 0x66, 0x95, 0x53, 0x01, 0x03, 0x03, 0x24, 0x18, 0x16, 0x42, 0x53, 0x12, 0x40, 0x27, 0x47, 0x38, 0x56, 0x33, 0x58, 0x49, 0x09, 0x33, 0x04, 0x31, 0x34, 0x02, 0x22, 0x32
     arraylength:	.word 0x80
+
+    tempArray: .word 0x90, 0x33, 0x44, 0x88, 0x56, 0x45, 0x56, 0x41, 0x00, 0x33, 0x44, 0x88, 0x56, 0x45, 0x56, 0x41, 0x00, 0x33, 0x44, 0x88, 0x56, 0x25, 0x58, 0x51, 0x03, 0x33, 0x24, 0x83, 0x52, 0x72, 0x16, 0x73, 0x85, 0x45, 0x47, 0x86, 0x36, 0x43, 0x52, 0x41, 0x74, 0x32, 0x04, 0x28, 0x26, 0x23, 0x46, 0x46, 0x06, 0x33, 0x34, 0x23, 0x21, 0x53, 0x15, 0x47, 0x77, 0x38, 0x41, 0x89, 0x58, 0x42, 0x51, 0x40, 0x86, 0x53, 0x40, 0x58, 0x36, 0x67, 0x53, 0x71, 0x03, 0x33, 0x74, 0x01, 0x89, 0x45, 0x12, 0x86, 0x60, 0x93, 0x42, 0x34, 0x66, 0x41, 0x51, 0x22, 0x60, 0x73, 0x41, 0x48, 0x46, 0x55, 0x52, 0x21, 0x00, 0x33, 0x64, 0x48, 0x66, 0x95, 0x53, 0x01, 0x03, 0x03, 0x24, 0x18, 0x16, 0x42, 0x53, 0x12, 0x40, 0x27, 0x47, 0x38, 0x56, 0x33, 0x58, 0x49, 0x09, 0x33, 0x04, 0x31, 0x34, 0x02, 0x22, 0x32
+    tempArrayLength: .word 0x80
 
     ## Menu options
     option1: .asciiz "1) Display entire array.\n"
@@ -21,18 +24,17 @@
     largestNumber: .asciiz "The largest number is: "
     smallestNumber: .asciiz "The smallest number is: "
 
-    ## Function constants
-    li $s6, 0       # Smallest num
-    li $s7, 10      # Largest num
-
 .globl main
 .text
 
 main:
     ## Array address and loop values
     la $t0, array           # Load the address of the array in t0
-    lw $t1, arraylength     # Using load word gets the value of arraylength and stores it in t6
+    lw $t1, arraylength     # Using load word gets the value of arraylength and stores it in t1
     li $t2, 0               # Store value zero in t2
+
+    la $t3, tempArray
+    lw $t4, tempArrayLength
 
     ## Branch comparison values
     li $s1, 1
@@ -40,6 +42,10 @@ main:
     li $s3, 3
     li $s4, 4
     li $s5, 5
+
+    ## Function constants
+    li $s6, 0       # Smallest num
+    li $s7, 10      # Largest num
 
     ##### PRINT MENU #####
 
@@ -89,8 +95,6 @@ main:
     beq $s0, $s5, func5
     
 func1:
-    beq $t2, $t1, end   # If t2 equals t2 then jump to end function
-
     ## Print value of array at given index
     lw $a0, ($t0)
     li $v0, 1
@@ -100,39 +104,41 @@ func1:
     la $a0, breakLine 
     syscall
 
+    beq $t2, $t1, end   # If t2 equals t2 then jump to end function
+
     addi $t2, $t2, 1    # Increment counter $t2
     addi $t0, $t0, 4    # Advance array pointer
-
+    
     j func1             # Jump to the start of func1 and execute again
 
 ############## Function 2 ##############
 func2:
-    beq $t2, $t1, func2Finish # If t2 equals t2 then jump to end function
-
     ## Store value of pointed array value in t4
     lw $a0, ($t0)
     move $t4, $a0           # $t4 is the current array value that we are comparing against
 
-    bgt $s7, $t4, lessThan
-    returnPoint:
-    blt $s6, $t4, greaterThan
+    bgt $s7, $t4, lessThan2
+    returnPointFunc2:
+    blt $s6, $t4, greaterThan2
 
-    addi $t2, $t2, 1        # Increment counter $t7
+    beq $t2, $t1, func2Finish # If t2 equals t2 then jump to end function
+
+    addi $t2, $t2, 1        # Increment counter $t2
     addi $t0, $t0, 4        # Advance array pointer
 
-    j func2 # Jump to the start of func1 and execute again
+    j func2
 
-greaterThan:
+greaterThan2:
     move $s6, $t4
-    j returnPoint
+    j returnPointFunc2
 
-lessThan:
+lessThan2:
     move $s7, $t4
-    j returnPoint
+    j returnPointFunc2
 
 func2Finish:
     li $v0, 4 
-    la $a0, smallestNumber 
+    la $a0, largestNumber
     syscall
 
     li $v0, 1
@@ -144,7 +150,7 @@ func2Finish:
     syscall
 
     li $v0, 4 
-    la $a0, largestNumber 
+    la $a0, smallestNumber
     syscall
 
     li $v0, 1
@@ -157,22 +163,45 @@ func2Finish:
 
     j end
 
-########################################
-
 ############## Function 3 ##############
 func3:
-    j end
+    ## Store value of pointed array value in t4
+    lw $a0, ($t0)
+    move $t4, $a0           # $t4 is the current array value that we are comparing against
 
-########################################
+    bgt $s7, $t4, lessThan3
+    returnPointFunc3:
+    blt $s6, $t4, greaterThan3
+
+    beq $t2, $t1, func3Finish # If t2 equals t2 then jump to end function
+
+    addi $t2, $t2, 1        # Increment counter $t7
+    addi $t0, $t0, 4        # Advance array pointer
+
+    j func3 # Jump to the start of func1 and execute again
+
+greaterThan3:
+    move $s6, $t4 # Stores current highest value
+    move $s1, $t0 # Stores current highest values address
+    j returnPointFunc3
+
+lessThan3:
+    move $s7, $t4 # Stores current lowest value
+    move $s2, $t0 # Stores current lowest values address
+    j returnPointFunc3
+
+func3Finish:
+    sw $s6, 0($s2)
+    sw $s7, 0($s1)
+    j end
 
 ############## Function 4 ##############
 func4:
-    beq $t2, $t1, end       # If t2 equals t2 then jump to end function
     beq $t2, 0, firstNum    # Skip the first number for smoothing
 
     ## Constants
-    li $s5, 4              # 25% denominator
-    li $s4, 2              # 50% denominator
+    li $s5, 4               # 25% denominator
+    li $s4, 2               # 50% denominator
     li $s3, 100             # 100 multiplier
 
     ## Let $t3 and $t5 be before and after numbers and $t4 be current
@@ -186,7 +215,7 @@ func4:
     
     
     
-    ## Current Number   #
+    ## Current Number   
     lw $a0, ($t0)       #
     move $t4, $a0       #
     div $t4, $s4        # Get 50% of value
@@ -208,6 +237,8 @@ func4:
 
     funcFourReturn:
 
+    beq $t2, $t1, end       # If t2 equals t2 then jump to end function
+
     addi $t2, $t2, 1        # Increment counter $t7
     addi $t0, $t0, 4        # Advance array pointer
 
@@ -216,10 +247,62 @@ func4:
 firstNum:
     j funcFourReturn
 
-########################################
+############## Function 5 ##############
 
 func5:
-    j end
+    # t0 = array address
+    # t1 = length
+    # t2 = counter
+    # t3 = temp array address
+    # t4 = temp length
+    li $t6, 4
+    mult $t1, $t6           # multiply length by four
+    mflo $s3                # store value in s3
+    
+    add $s3, $s3, $t0       # Add s3 value to array address to get address of last value stored in array
+
+    j func5FlipArrayOrder
+
+func5FlipArrayOrder:
+    # $s3 is the array pointer from the end
+    #
+    lw $a0, 0($s3)          # Get value from end of array
+    move $s4, $a0           # and store it in $s4
+
+    sw $s4, ($t3)           # Store value from end of array in start of new temp array
+
+    beq $t2, $t1, func5SteppingStone
+
+    addi $t2, $t2, 1        # Increment counter $t2
+    addi $t3, $t3, 4        # Increment address of temp array to next location
+    sub $s3, $s3, 4         # Decrement array pointer to move backwards
+
+    j func5FlipArrayOrder
+
+func5SteppingStone:
+    # Used to reset values for next coming loop
+
+    li $t2, 0           # Counter reset
+    la $t0, array       # Array address reset
+    la $t3, tempArray   # Temp array address reset
+    j func5PopulateOriginalArrayWithReverse
+
+func5PopulateOriginalArrayWithReverse:
+    lw $a0, 0($t3)
+    move $t5, $a0
+
+    sw $t5, ($t0)
+
+    beq $t2, $t1, end   # If t2 equals t1 then jump to end function
+
+    addi $t2, $t2, 1    # Increment counter $t2
+    addi $t3, $t3, 4    # Advance array pointer
+    addi $t0, $t0, 4    # Advance array pointer
+
+
+    j func5PopulateOriginalArrayWithReverse
+
+############# End Function #############
 
 end:
     ## Ask user if they would like to use another function before quitting
@@ -229,9 +312,9 @@ end:
     ##
     li $v0, 5
     syscall
-    move $t3, $v0
+    move $t4, $v0
     ##
-    beq $t3, 1, main
+    beq $t4, 1, main
 
     ## Terminate program using system call code 10
     li $v0, 10
